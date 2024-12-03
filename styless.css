@@ -1,0 +1,125 @@
+/* Conteneur principal pour gérer la disposition */
+#container {
+    display: flex;
+    height: 100vh; /* Pleine hauteur pour occuper l'écran */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style pour la barre latérale gauche */
+#sidebar {
+    width: 250px; /* Largeur de la barre latérale */
+    background-color: #f4f4f4; /* Fond gris clair */
+    padding: 20px;
+    height: 100%; /* Hauteur complète */
+    box-sizing: border-box;
+}
+
+#showEpicentreButton {
+    padding: 10px 15px;
+    background-color: #207705; /* Couleur rouge pour l'épicentre */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: -21px; /* Déplace le bouton légèrement vers la droite */
+    font-size: 12px;
+}
+
+#hideEpicentreButton {
+    background-color: red; /* Rouge */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: -21px;
+    font-size: 12px;
+}
+
+/* Style pour la carte */
+#map {
+    height: 80vh;  /* Hauteur de la carte */
+    width: 70vw;   /* Largeur de la carte (70% de la largeur de la page) */
+    border: 2px solid #333;  /* Bordure grise de 5px autour de la carte */
+    box-sizing: border-box;  /* Inclure la bordure dans les dimensions de la carte */
+    margin-top: -110px;  /* Remonter la carte légèrement pour l'aligner avec les barres latérales */
+}
+
+/* Style pour la barre de droite */
+#right-bar {
+    display: none; /* Masquer la barre de droite par défaut */
+    width: 300px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Tableau d'informations */
+#communeTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#communeTable th, #communeTable td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#communeTable th {
+    background-color: #f2f2f2;
+}
+
+/* Centrage horizontal du titre */
+h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Style pour le conteneur des contrôles */
+#controls {
+    margin-top: -20px;
+}
+
+/* Style pour les éléments du formulaire de contrôle */
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Style pour l'option Désactiver tous les hôpitaux en rouge */
+#hospitalSelect option[value='disable'] {
+    color: rgb(238, 18, 18);
+    font-weight: bold;
+}
+
+/* Style pour l'option Activer tous les hôpitaux en vert */
+#hospitalSelect option[value='all'] {
+    color: rgb(22, 161, 22);
+    font-weight: bold;
+}
+
+/* Centrer les options de sélection des communes */
+#communeSelect {
+    margin-bottom: 10px;
+}
+
+.info-label {
+    background-color: rgba(255, 255, 255, 0.4); /* Fond blanc semi-transparent */
+    border: 1px solid #333; /* Bordure noire fine */
+    padding: 1px 1px; /* Espace intérieur */
+    border-radius: 6px; /* Coins arrondis */
+    font-size: 10px; /* Taille de la police */
+    font-family: Arial, sans-serif; /* Police lisible */
+    color: #000000; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+}
